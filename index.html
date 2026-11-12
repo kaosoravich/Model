@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perseverance Rover 3D & AR</title>
+  <script type="module" src="https://googleapis.com"></script>
+  <style>
+    body { margin: 0; padding: 0; background-color: #f4f4f9; }
+    model-viewer { width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+
+  <model-viewer 
+    src="https://raw.githubusercontent.com/kaosoravich/Model/raw/refs/heads/main/perseverance_mars_rover.glb"
+    alt="Perseverance Rover 3D Model"
+    ar
+    ar-modes="scene-viewer webxr quick-look"
+    camera-controls
+    auto-rotate
+    shadow-intensity="1">
+  </model-viewer>
+
+</body>
+</html>
