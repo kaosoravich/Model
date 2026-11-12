@@ -6,20 +6,52 @@
   <title>Perseverance Rover 3D & AR</title>
   <script type="module" src="https://googleapis.com"></script>
   <style>
-    body { margin: 0; padding: 0; background-color: #f4f4f9; }
-    model-viewer { width: 100vw; height: 100vh; }
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #111111;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+    model-viewer {
+      width: 100%;
+      height: 100%;
+    }
+    /* ปรับแต่งหน้าตาปุ่มกดเข้าโหมด AR มุมขวาล่าง */
+    .ar-button {
+      background-color: #1a73e8;
+      color: white;
+      border-radius: 24px;
+      border: none;
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
   <model-viewer 
     src="https://raw.githubusercontent.com/kaosoravich/Model/raw/refs/heads/main/perseverance_mars_rover.glb"
-    alt="Perseverance Rover 3D Model"
+    alt="ยานสำรวจดาวอังคาร Perseverance Rover"
     ar
     ar-modes="scene-viewer webxr quick-look"
     camera-controls
     auto-rotate
     shadow-intensity="1">
+    
+    <!-- ปุ่มกดเข้าโหมด AR ที่ทำงานร่วมกับ Scene Viewer โดยตรง -->
+    <button slot="ar-button" class="ar-button">
+      📱 วางยานในพื้นที่ของคุณ (AR)
+    </button>
+
   </model-viewer>
 
 </body>
